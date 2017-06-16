@@ -1,0 +1,39 @@
+#left {
+    display: inline-block;
+    vertical-align: top;
+    width: 300px;
+    height: 200px;
+}
+#right {
+    display: inline-block;
+    vertical-align: top;
+    width: 300px;
+    height: 200px;
+}
+#left h1 {
+    margin-bottom: 5px;
+}
+#right h1, h2 {
+    text-align: center;
+}
+#submit {
+    font-size: 14px;
+    margin-top: 10px;
+    height: 25px;
+    width: 100%;
+}
+#needswork {
+    color: red;
+}
+#decentstart {
+    color: orange;
+}
+#good {
+    color: black;
+}
+#great {
+    color: green;
+}
+#elite {
+    color: blue;
+}

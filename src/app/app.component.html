@@ -1,0 +1,23 @@
+<div id='left'>
+  <h1>GitHub Score</h1>
+  <form (submit)="getTasks()">
+      Github Username: <input type="text" name='username'
+      required
+      [(ngModel)]="user.username"
+      #username="ngModel">
+      <input id='submit' type="submit" value="Calculate My Github Score">
+  </form>
+</div>
+
+<div *ngIf='user.isExists==true' id='right'>
+    <h1>Your Score: {{user.score}}</h1>
+    <div id='needswork' *ngIf='user.score < 20'><h2>Needs work!</h2></div>
+    <div id='decentstart' *ngIf='user.score > 20 && user.score < 50'><h2>A decent start!</h2></div>
+    <div id='good' *ngIf='user.score >= 50 && user.score < 100'><h2>Doing good!</h2></div>
+    <div id='great' *ngIf='user.score >= 100 && user.score < 200'><h2>Great job!</h2></div>
+    <div id='elite' *ngIf='user.score >= 200'><h2>Github Elite!</h2></div>
+</div>
+
+<div *ngIf='user.isExists==false' id='right'>
+    <h1>User doesn't exist!</h1>
+</div>
